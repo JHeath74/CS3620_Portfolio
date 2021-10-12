@@ -1,0 +1,82 @@
+body {
+background-color:lightblue;
+text
+}
+
+div{
+ border: 2px solid powderblue;
+ background-color:lightgreen;
+ text-color: red
+ font-family: Courier
+
+}
+
+head{
+background-color:tomato;
+text-color: blue
+}
+
+nav{
+    background-color:tomato;
+    text-color:yellow;
+}
+
+table{
+table-width: auto;
+}
+
+td{
+border:5px double black;
+background-color:yellow;
+text-color:black;
+}
+
+th, tr{
+background-color:orange;
+text-color:white;
+}
+
+
+p{
+border:5px double lightred;
+font-family: Arial
+}
+
+li{
+border:5px double green;
+}
+
+h1{
+ font-family:courier;
+ text-color:red
+ text-background:green
+ font-size:200%;
+}
+
+h2{
+ font-family:Times New Roman;
+ text-color:red
+ text-background:green
+ font-size:150%;
+}
+
+h3{
+ font-family:verdana;
+ text-color:orange
+ text-background:purple
+ font-size:100%;
+}
+
+h4{
+ font-family: sans-serif;
+ text-color:blue
+ text-background:yellow
+ font-size:50%;
+}
+
+h5{
+ font-family: Helvetica;
+ text-color:white
+ text-background:black
+ font-size:50%;
+}

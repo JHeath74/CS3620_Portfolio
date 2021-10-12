@@ -1,0 +1,113 @@
+{% extends "PortfolioDatabaseApp/base.html" %}
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta content="utf-8" http-equiv="encoding">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+
+    <title>My Hobbies</title>
+</head>
+<body>
+{% block body %}
+
+<p>
+    Some of my Hobbies and interests.  Listed a few and added a few pictures too.
+</p>
+
+ <table width="100%" border="1" cellspacing="0" cellpadding="0"/>
+ {% for Hobby in HobbyList %}
+<div class="row">
+    <div class = "col-md-3 offset-mod-2">
+        <img class="card" height="150px" src="{{Hobby.HobbyImage}}"/>
+    </div>
+    <div class = "col-md-4 offset-mod-2">
+        <h3>{{Hobby.HobbyName}} </h3>
+    </div>
+    <div class = "col-md-2 offset-mod-2">
+        <h5>{{Hobby.HobbyDescription}}</h5>
+    </div>
+    <div class="col-md-2">
+        <a href="{% url 'PortfolioDatabaseApp:HobbiesDescriptionDetail' Hobby.id %}" class="btn btn-success">Details</a>
+    </div>
+</div>
+{% endfor %}
+
+
+<table width="100%" border="2" cellspacing="0" cellpadding="0"/>
+    <tr>
+        <th>
+            <p>
+                Star Trek - End Credits Theme
+            </p>
+        </th>
+        <th>
+            <p>
+                Rainy Moods
+            </p>
+        </th>
+        <th>
+            <p>
+                Make 'Em Laugh
+            </p>
+        </th>
+    </tr>
+<tr>
+    <td>
+         <audio controls autoplay>
+         <source src="./Audio/Star Trek 9-End Credits.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+         </audio>
+    </td>
+    <td>
+         <audio controls>
+         <source src="./Audio/Full Length Rainy Mood.mp4" type="audio/mpeg">
+         Your browser does not support the audio element.
+         </audio>
+    </td>
+    <td>
+         <audio controls>
+         <source src="./Audio/10 - Make 'Em Laugh.mp3" type="audio/mpeg">
+         Your browser does not support the audio element.
+         </audio>
+    </td>
+  </tr>
+
+<table width="100%" border="2" cellspacing="0" cellpadding="0"/>
+ <tr>
+        <th>
+            <p>
+                Rho Ophiuchi
+            </p>
+        </th>
+        <th>
+            <p>
+                Red Castle,  Uintas, Utah
+            </p>
+        </th>
+        <th>
+            <p>
+                Oregon Coast
+            </p>
+        </th>
+    </tr>
+    <td>
+        <img src= "https://cdn.astrobin.com/thumbs/_rNbsKitBztX_1824x0_sWXLOnwG.jpg" width="640" height="480">
+    </td>
+    <td>
+         <img src= "https://actionphototours.com/wp-content/uploads/2014/04/1X8A8906-Copy.jpg" width="640" height="400">
+    </td>
+    <td>
+        <img src= "https://upload.wikimedia.org/wikipedia/commons/a/a2/OregonCoastEcola_Edit.jpg" width="640" height="400">
+    </td>
+</table>
+
+{% endblock %}
+
+</body>
+</html>
+
