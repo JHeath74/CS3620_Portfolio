@@ -33,6 +33,7 @@
     </div>
     <div class="col-md-2">
         <a href="{% url 'PortfolioDatabaseApp:MyPortfolioDetailed' Portfolio.id %}" class="btn btn-success">Details</a>
+        <a href="{% url 'PortfolioDatabaseApp:updateportfolio' Portfolio.id %}" class="btn btn-Primary">Edit</a>
     </div>
 </div>
 {% endfor %}

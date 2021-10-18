@@ -14,27 +14,35 @@
 
 
     <title>Contact</title>
-</head> 
+</head>
+
 <body>
- <nav class="navbar" navbar-dark bg-dark>
-    <a href="#" class="navbar-brand"> Portfolio Database</a>
-    <div class="navbar">
-        <a herf="#" class="nav-item nav-link">Contact</a>
-        <a herf="#" class="nav-item nav-link">Home</a>
-        <a herf="#" class="nav-item nav-link">Hobbies</a>
-        <a herf="#" class="nav-item nav-link">Portfolio</a>
+{% block body %}
 
-    </div>
 
-</nav>
-
- {% block body %}
 <p style ="text-align:center">
    Name:  Jeffory Kyle Heath<br>
    Email: <a href="mailto:jefforyheath@mail.weber.edu">jefforyheath@mail.weber.edu</a>
 
 </p>
 
+ {% for contact in ContactList %}
+
+ <table>
+  <tr>
+    <th>Contact Name</th>
+    <th>Contact Email</th>
+    <th>Message</th>
+
+  </tr>
+  <tr>
+    <td>{{ contact.ContactName }}</td>
+    <td>{{ contact.ContactEmail }}</td>
+    <td>{{ contact.ContactMessage }}</td>
+  </tr>
+</table>
+
+{% endfor %}
  <table width="100%" border="0" cellspacing="0" cellpadding="0"/>
     <tr>
         <td>

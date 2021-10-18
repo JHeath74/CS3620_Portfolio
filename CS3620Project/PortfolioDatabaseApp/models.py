@@ -20,3 +20,13 @@ class Portfolio(models.Model):
     PortfolioName = models.CharField(max_length=200)
     PortfolioDescription = models.CharField(max_length=200)
     PortfolioImage = models.CharField(max_length=500, default="https://centralaz.edu/wp-content/uploads/2017/08/CIS_Comp_Prog_Main_507378942.jpg")
+
+
+class Create_Contact(models.Model):
+
+    def __str__(self):
+        return self.ContactName
+
+    ContactName = models.CharField(max_length=200)
+    ContactEmail = models.CharField(max_length=200)
+    ContactMessage = models.CharField(max_length=200)

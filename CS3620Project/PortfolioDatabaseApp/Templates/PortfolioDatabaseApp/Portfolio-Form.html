@@ -1,0 +1,25 @@
+{% extends 'PortfolioDatabaseApp/base.html' %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+</head>
+<body>
+
+{% block body %}
+ <form method = "POST">
+     {% csrf_token %}
+     <table backgroundcolor="lightyellow">
+         <tr>
+                  {{form}}
+         </tr>
+     </table>
+     <button type="submit">Save Profile</button>
+ </form>
+
+{% endblock %}
+
+</body>
+</html>

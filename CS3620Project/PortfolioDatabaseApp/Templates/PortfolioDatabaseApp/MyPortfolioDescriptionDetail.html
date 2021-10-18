@@ -31,6 +31,8 @@
                   {{ Portfolio.PortfolioName}
                   {{ Portfolio.PortfolioDescription}}
               </div>
+              <a herf="{% url 'PortfolioDatabaseApp:update_portfolio_item' Portfolio.id %}" class="nav-item nav-link">Edit Portfolio Item</a>
+              <a href="{% url 'PortfolioDatabaseApp:deleteportfolio' Portfolio.id %}" class="nav-item nav-link">Delete Portfolio Item</a>
           </div>
      </div>
 </div>
